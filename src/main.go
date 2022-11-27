@@ -3,28 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	// Rectángulo
-	baseRectangulo := 20
-	alturaRectangulo := 10
+	helloMessage := "Hello"
+	worldMessage := "world"
 
-	areaRectangulo := baseRectangulo * alturaRectangulo
+	// Println: Salto de Linea Automatico
+	fmt.Println(helloMessage, worldMessage)
+	fmt.Println(helloMessage, worldMessage)
 
-	fmt.Println("El Area del Rectángulo es :", areaRectangulo)
+	// Printf
+	nombre := "Platzi"
+	cursos := 500
+	// Con valores seguros
+	fmt.Printf("%s tiene más de %d cursos\n", nombre, cursos)
+	// Con valores inseguros
+	fmt.Printf("%v tiene más de %v cursos\n", nombre, cursos)
 
-	// Circulo : AreaCirculo = pi por radio al cudrado
-	const PI float64 = 3.14 // Constant
-	var radioCirculo float64 = 10
+	// Sprintf
+	message := fmt.Sprintf("%v tiene más de %v cursos\n", nombre, cursos)
+	fmt.Println(message)
 
-	areaCirculo := PI * radioCirculo * radioCirculo
-
-	fmt.Println("El Area del Circulo es :", areaCirculo)
-
-	// Trapecio
-	var baseUno float64 = 6
-	var baseDos float64 = 15
-	var alturaTrapecio float64 = 25
-
-	areaTrapecio := ((baseUno + baseDos) * alturaTrapecio) / 2
-
-	fmt.Println("El Area del Trapecio es :", areaTrapecio)
+	// Tipo de datos:
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("cursos: %T\n", cursos)
 }
