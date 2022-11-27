@@ -3,33 +3,28 @@ package main
 import "fmt"
 
 func main() {
-	//Declaracion de constantes
-	const pi float64 = 3.14
-	const pi2 = 3.16
+	// Rectángulo
+	baseRectangulo := 20
+	alturaRectangulo := 10
 
-	fmt.Println("Pi:", pi)
-	fmt.Println("Pi2:", pi2)
+	areaRectangulo := baseRectangulo * alturaRectangulo
 
-	//Declaracion de varaibles
-	base := 12          //Primera forma
-	var altura int = 14 //Segunda forma
-	var area int        //Go no compila si las variables no son usadas
+	fmt.Println("El Area del Rectángulo es :", areaRectangulo)
 
-	fmt.Println(base, altura, area)
+	// Circulo : AreaCirculo = pi por radio al cudrado
+	const PI float64 = 3.14 // Constant
+	var radioCirculo float64 = 10
 
-	//Zero values
-	//Go asigna vaalores a variables vacías
-	var a int
-	var b float64
-	var c string
-	var d bool
+	areaCirculo := PI * radioCirculo * radioCirculo
 
-	fmt.Println(a, b, c, d)
+	fmt.Println("El Area del Circulo es :", areaCirculo)
 
-	//Ejercicio
-	//Calcular el áera del cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
+	// Trapecio
+	var baseUno float64 = 6
+	var baseDos float64 = 15
+	var alturaTrapecio float64 = 25
 
-	fmt.Println("El área del cuadrado es:", areaCuadrado)
+	areaTrapecio := ((baseUno + baseDos) * alturaTrapecio) / 2
+
+	fmt.Println("El Area del Trapecio es :", areaTrapecio)
 }
