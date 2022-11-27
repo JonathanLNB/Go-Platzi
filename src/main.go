@@ -1,28 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+func areaCirculo(radio float64) float64 {
+	return math.Pi * radio * radio
+}
+func areaRectangulo(base float64, altura float64) float64 {
+	return base * altura
+}
+
+func areaTrapezoide(B float64, b float64, h float64) float64 {
+	return h * (B + b) / 2
+}
 
 func main() {
-	helloMessage := "Hello"
-	worldMessage := "world"
+	fmt.Printf("Circulo %.2f \n", areaCirculo(2))
+	fmt.Printf("Rectangulo %.2f \n", areaRectangulo(5, 10))
+	fmt.Printf("Trapezoide %.2f \n", areaTrapezoide(10, 5, 3))
 
-	// Println: Salto de Linea Automatico
-	fmt.Println(helloMessage, worldMessage)
-	fmt.Println(helloMessage, worldMessage)
-
-	// Printf
-	nombre := "Platzi"
-	cursos := 500
-	// Con valores seguros
-	fmt.Printf("%s tiene más de %d cursos\n", nombre, cursos)
-	// Con valores inseguros
-	fmt.Printf("%v tiene más de %v cursos\n", nombre, cursos)
-
-	// Sprintf
-	message := fmt.Sprintf("%v tiene más de %v cursos\n", nombre, cursos)
-	fmt.Println(message)
-
-	// Tipo de datos:
-	fmt.Printf("helloMessage: %T\n", helloMessage)
-	fmt.Printf("cursos: %T\n", cursos)
 }
